@@ -77,7 +77,7 @@ if __name__ == "__main__":
 	results	= [x for x in results if x != []]																	# remove empty results
 	results = "\n".join(results)																				# list --> string
 
-	out = open(settings.out_location + "output.txt", "w+")														# open output file
+	out = open(settings.out_location + settings.inp_location[-10:-5] + "output.txt", "w+")														# open output file
 	out.write(results)																							# save results
 	out.close()
 	t = strftime("%a, %d %b %Y %H:%M:%S +0000", localtime())
